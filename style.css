@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f1f5f9;
+
+    color: #1e293b;
+}
+
+
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+
+/* MAIN */
+
+main {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 30px 20px;
+}
+
+
+/* PANELS */
+
+.panel {
+    background: white;
+
+    margin-bottom: 25px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.panel h2 {
+    margin-bottom: 20px;
+
+    color: #2563eb;
+}
+
+
+/* FORM */
+
+form {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 15px;
+}
+
+input,
+select,
+button {
+    padding: 12px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+input,
+select {
+    border: 1px solid #cbd5e1;
+}
+
+button {
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* STATUS */
+
+.blockchain-status {
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+#chainStatus {
+    font-weight: bold;
+}
+
+
+/* TABLE */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+
+th {
+    background: #2563eb;
+
+    color: white;
+}
+
+th,
+td {
+    padding: 14px;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    text-align: left;
+}
+
+tr:hover {
+    background: #f8fafc;
+}
+
+
+/* HASH */
+
+.hash {
+    max-width: 260px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-family: monospace;
+
+    font-size: 13px;
+}
+
+
+/* TRANSACTION STATUS */
+
+.pending {
+    color: #d97706;
+
+    font-weight: bold;
+}
+
+.confirmed {
+    color: #16a34a;
+
+    font-weight: bold;
+}
+
+.rejected {
+    color: #dc2626;
+
+    font-weight: bold;
+}
+
+
+/* INFO */
+
+.info p {
+    margin-bottom: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    background: #1e293b;
+
+    color: white;
+
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Blockchain Cloud Monitor</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🔗 Blockchain Cloud Monitor</h1>
+
+    <p>
+        Демонстрационная облачная платформа для мониторинга
+        блокчейн-транзакций
+    </p>
+</header>
+
+
+<main>
+
+    <section class="panel">
+
+        <h2>Статус блокчейн-цепочки</h2>
+
+        <div class="blockchain-status">
+            <span id="chainStatus">
+                Проверка не выполнена
+            </span>
+
+            <button id="checkChainButton">
+                Проверить целостность
+            </button>
+        </div>
+
+    </section>
+
+
+    <section class="panel">
+
+        <h2>Создать новую транзакцию</h2>
+
+        <form id="transactionForm">
+
+            <input
+                type="text"
+                id="sender"
+                placeholder="Отправитель"
+                required
+            >
+
+            <input
+                type="text"
+                id="receiver"
+                placeholder="Получатель"
+                required
+            >
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Сумма"
+                min="1"
+                required
+            >
+
+            <select id="status">
+
+                <option value="Pending">
+                    Pending
+                </option>
+
+                <option value="Confirmed">
+                    Confirmed
+                </option>
+
+                <option value="Rejected">
+                    Rejected
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Добавить транзакцию
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <section class="panel">
+
+        <h2>Блокчейн-транзакции</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Блок</th>
+                        <th>Отправитель</th>
+                        <th>Получатель</th>
+                        <th>Сумма</th>
+                        <th>Статус</th>
+                        <th>Hash</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="transactionTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <section class="panel info">
+
+        <h2>Информация</h2>
+
+        <p>
+            Данное приложение является учебной демонстрацией
+            технологии блокчейн.
+        </p>
+
+        <p>
+            Каждый новый блок содержит SHA-256 хеш предыдущего блока,
+            благодаря чему можно проверить целостность всей цепочки.
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        Blockchain Cloud Monitor |
+        Educational Blockchain Project
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
